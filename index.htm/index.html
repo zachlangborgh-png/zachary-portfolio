@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zachary Langborgh | Cybersecurity Student</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Zachary Langborgh">
+    <meta name="description" content="Zachary Langborgh's professional student portfolio featuring his cybersecurity education, work experience, leadership, skills, and career goals.">
+    <meta name="keywords" content="Zachary Langborgh, cybersecurity student, computer networking, information technology, web development">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Type selectors: shared typography and page structure. */
+        * { box-sizing: border-box; }
+        html { scroll-padding-top: 1rem; }
+        p { font-family: Arial, Helvetica, sans-serif; font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem; }
+        img { max-width: 100%; height: auto; }
+        section { margin-bottom: 2rem; }
+        /* Element styles. */
+        body { max-width: 1000px; margin: auto; padding: 20px; background-color: #e9f0f5; background-image: url('images/background.png'); color: #1f2933; font-family: Arial, sans-serif; font-size: 17px; line-height: 1.6; overflow-wrap: anywhere; }
+        header { min-height: 260px; padding: 30px; box-sizing: border-box; background-color: #173f5f; background-image: linear-gradient(rgba(8, 30, 50, 0.45), rgba(8, 30, 50, 0.75)), url('images/cybersecurity-banner.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; color: white; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+        h1 { font-size: 40px; margin: 0; text-shadow: 0 2px 8px #000000; }
+        nav { background-color: #d9e6f2; padding: 14px; text-align: center; font-size: 18px; }
+        main { padding: 28px; }
+        h2 { color: #173f5f; font-size: 28px; }
+        hr { width: 70%; border: 4px solid #1d8490; border-radius: 5px; margin: 32px auto; }
+        footer { background-color: #173f5f; color: white; padding: 20px; text-align: center; }
+        footer a { color: white; }
+        /* IDs: two unique divs. */
+        #wrapper { background-color: white; border: 1px solid #bfd0db; box-shadow: 0 8px 28px rgba(23, 63, 95, 0.18); }
+        #introduction { display: flow-root; }
+        /* Classes: reusable formatting. */
+        .tagline { font-size: 20px; margin: 8px 0 0; text-shadow: 0 2px 6px #000000; }
+        .portrait { display: block; float: right; width: 34%; max-width: 280px; height: auto; margin: 0 0 18px 28px; border: 5px solid #d9e6f2; border-radius: 8px; }
+        .important { font-weight: bold; }
+        .highlight { color: #1261a0; }
+        .skills-diagram { display: block; width: 100%; max-width: 620px; height: auto; margin: 24px auto; background-color: #eef6f8; border-radius: 10px; }
+        .connection { stroke:#1d8490; stroke-width:4; }
+        .security-node { fill:#173f5f; }
+        .network-node { fill:#1d8490; }
+        .language-node { fill:#39739d; }
+        .security-label { fill:white; font-size:20px; font-weight:bold; }
+        .network-label { fill:white; font-size:18px; }
+        .python-label { fill:white; font-size:17px; }
+        .web-label { fill:white; font-size:15px; }
+        .caption { text-align: center; }
+        .resume-preview { display: block; width: 100%; max-width: 430px; height: auto; margin: 0 auto; border: 1px solid #a8b8c3; box-shadow: 0 4px 14px rgba(23, 63, 95, 0.2); }
+        /* Navigation states keep links readable and keyboard-accessible. */
+        body { width: 100%; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.35rem; }
+        nav a { color: #173f5f; font-size: 1.05rem; font-weight: bold; text-decoration: none; padding: 0.55rem 0.7rem; border-radius: 5px; }
+        nav a:hover, nav a:focus-visible { color: white; background-color: #173f5f; }
+        a { color: #1261a0; text-underline-offset: 0.18em; }
+        a:focus-visible { outline: 3px solid #1d8490; outline-offset: 3px; }
+        footer a { color: white; }
+        h2 { margin-top: 0; margin-bottom: 1rem; }
+        /* Responsive layout: stack the portrait and retain readable text. */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            header { padding: 24px 16px; min-height: 220px; }
+            h1 { font-size: 2rem; }
+            main { padding: 20px; }
+            .portrait { float: none; width: 100%; max-width: 280px; margin: 0 auto 20px; }
+            nav a { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body id="top">
+    <div id="wrapper">
+        <!-- The masthead uses an optimized background image from the images folder. -->
+        <header>
+            <h1>Zachary Langborgh</h1>
+            <p class="tagline">Cybersecurity Student and Aspiring Technology Professional</p>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html">My Resume</a>
+            <a href="#about">About Me</a>
+            <a href="#goals">My Goals</a>
+            <a href="#interests">Technical Interests</a>
+            <a href="#experience">Experience</a>
+        </nav>
+        <main>
+            <section>
+                <h2 id="about">About Me</h2>
+                <div id="introduction">
+                <a href="resume.html" title="View Zachary Langborgh's resume">
+                    <img src="images/zachary-portrait.jpg" alt="Portrait of Zachary Langborgh standing in front of an American flag" class="portrait">
+                </a>
+                <p>My name is <b>Zachary Langborgh</b>, and I am a high school dual-enrollment student pursuing an education in <i>cybersecurity</i>. I chose this field because of my interest in computers, technology, and learning how computer systems and networks can be protected. As I continue my education, I hope to develop the technical knowledge and hands-on skills needed to begin a successful career in technology.</p>
+                <p>Alongside school, my experience includes working at Culver’s, providing pet-care services, and completing independent household jobs. These responsibilities have taught me the importance of reliability, teamwork, communication, time management, and adapting to the needs of others. I believe these skills will support me as I continue learning and eventually begin working in cybersecurity and information technology.</p>
+                <p class="important">I am building this website to strengthen my web-development skills and create a <span class="highlight">professional online portfolio</span> that can grow with my education and career.</p>
+                </div> <!-- close introduction -->
+            </section>
+            <hr>
+            <section>
+                <h2 id="goals">My Goals</h2>
+                <p>My educational goal is to complete my cybersecurity studies while developing a strong understanding of computers, networking, and information security. I want to gain practical experience that will prepare me for future opportunities in cybersecurity. Over time, I hope to earn industry certifications and contribute to an organization that values security, reliability, and continuous improvement.</p>
+            </section>
+            <section>
+                <h2 id="interests">My Technical Interests</h2>
+                <p>The technology field changes constantly, so I am building skills in several connected areas, including cybersecurity, computer networking, information technology, Python, and web development. Learning how these areas work together will help me understand how systems are created and how they can be protected from security threats.</p>
+                <p>A professional resource I use to learn more about the field is the <a href="https://www.cisa.gov/careers" target="_blank" rel="noopener noreferrer">Cybersecurity and Infrastructure Security Agency careers website</a>. It provides information about cybersecurity careers and the skills used to protect important systems and information.</p>
+                <!-- This SVG represents Zachary's connected technical interests. -->
+                <svg viewBox="0 0 620 170" role="img" aria-labelledby="skillsTitle skillsDescription" class="skills-diagram">
+                    <title id="skillsTitle">Connected technology interests</title>
+                    <desc id="skillsDescription">Cybersecurity connected to networking, Python, and web development</desc>
+                    <line x1="310" y1="85" x2="105" y2="85" class="connection"></line>
+                    <line x1="310" y1="85" x2="515" y2="45" class="connection"></line>
+                    <line x1="310" y1="85" x2="515" y2="125" class="connection"></line>
+                    <circle cx="310" cy="85" r="62" class="security-node"></circle>
+                    <circle cx="105" cy="85" r="53" class="network-node"></circle>
+                    <circle cx="515" cy="45" r="40" class="language-node"></circle>
+                    <circle cx="515" cy="125" r="40" class="language-node"></circle>
+                    <text x="310" y="91" text-anchor="middle" class="security-label">Cybersecurity</text>
+                    <text x="105" y="91" text-anchor="middle" class="network-label">Networking</text>
+                    <text x="515" y="51" text-anchor="middle" class="python-label">Python</text>
+                    <text x="515" y="121" text-anchor="middle" class="web-label">Web</text>
+                    <text x="515" y="140" text-anchor="middle" class="web-label">Development</text>
+                </svg>
+            </section>
+            <section>
+                <h2 id="experience">Experience and Leadership</h2>
+                <p>I balance my education with work at Culver's, pet-care services, and independent household jobs. Through Trail Life USA, I have served as a patrol leader, quartermaster, and first officer. These experiences have helped me develop responsibility, organization, and a practical approach to solving problems.</p>
+                <p>I earned my Microsoft Office Specialist: Word Associate certification in August 2026, and my college coursework includes introductory Python programming. I also volunteer in my community, including serving as a maintenance assistant at Emmanuel Baptist Church in Parrish.</p>
+                <p class="caption">Click the resume image to view the complete document.</p>
+                <a href="resume.html" title="Open Zachary Langborgh's resume">
+                    <img src="images/resume-preview.jpg" alt="Preview of Zachary Langborgh's resume" class="resume-preview">
+                </a>
+            </section>
+        </main>
+        <footer>
+            Contact Me:
+            <a href="mailto:zachlangborgh@gmail.com">zachlangborgh@gmail.com</a> |
+            <a href="tel:+17038518770">(703) 851-8770</a> |
+            <a href="#top">Return to Top</a><br>
+            &copy; 2026 Zachary Langborgh. All rights reserved.
+        </footer>
+    </div> <!-- close wrapper -->
+</body>
+</html>
