@@ -1,0 +1,43 @@
+/* Shared layout and typography */
+* { box-sizing: border-box; }
+body { margin: 0; padding: 20px 12px; background: #eef2f5; color: #1f2933; font-family: Arial, sans-serif; line-height: 1.6; overflow-wrap: anywhere; }
+#wrapper { width: 100%; max-width: 1000px; margin: 0 auto; background: white; }
+a { color: #125f89; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid #b65a00; outline-offset: 4px; }
+/* Masthead */
+header { background: #173f5f; color: white; padding: 32px 24px; text-align: center; border-top: 6px solid #1d8490; }
+header .site-name { font-size: 2.25em; font-weight: bold; margin: 0; }
+header p { margin-bottom: 0; font-size: 1.125em; }
+/* Mobile navigation first */
+nav { width: 100%; background: #d9e6f2; padding: 12px; text-align: center; }
+nav ul { list-style: none; padding: 0; margin: 0; }
+nav li { display: block; margin: 5px 0; }
+nav a { display: block; padding: 6px 14px; border: 2px solid transparent; font-size: 1.5em; text-decoration: none; color: #173f5f; border-radius: 4px; }
+nav a:hover, nav a:focus-visible { background: #173f5f; color: white; }
+/* Main content */
+main { padding: 24px; }
+h1 { color: #173f5f; font-size: 2em; line-height: 1.25; margin-top: 0; }
+h2 { color: #173f5f; font-size: 1.5em; margin: 0 0 12px; }
+h3 { font-size: 1.125em; margin-bottom: 8px; }
+section { margin-bottom: 28px; }
+main section + section { border-top: 1px solid #d9e6f2; padding-top: 24px; }
+li { margin-bottom: 10px; }
+.courses { list-style-type: square; padding-left: 24px; }
+.recommendations { list-style-image: url("images/diamond.svg"); padding-left: 24px; }
+.references { list-style-type: upper-roman; padding-left: 32px; }
+dt { font-weight: bold; color: #173f5f; }
+dd { margin-left: 24px; }
+.special-character { color: purple; font-weight: bold; font-size: 1.3em; }
+.callout { background: #edf6f6; border-left: 4px solid #1d8490; padding: 16px; }
+small { font-size: 0.85em; }
+/* Footer */
+footer { background: #173f5f; color: white; padding: 18px; text-align: center; }
+footer a { color: white; }
+footer .special-character { background: white; border-radius: 3px; padding: 0 3px; }
+/* Horizontal desktop navigation and two-column resume */
+@media only screen and (min-width: 640px) {
+ nav li { display: inline; margin: 0; }
+ nav a { display: inline-block; }
+ .resume-columns { display: grid; grid-template-columns: 1fr 2fr; gap: 28px; }
+ .resume-columns section + section { border-top: 0; padding-top: 0; }
+}
