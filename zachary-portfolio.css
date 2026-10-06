@@ -122,3 +122,48 @@ nav a.selected {background-color:#1d6674; color:white;}
         margin: 0 15px;
     }
 }
+/* Portfolio */
+
+#figureContainer {
+    text-align: center;
+    width: 100%;
+}
+
+#figureContainer figure {
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+    margin: 10px;
+    text-align: center;
+}
+
+#figureContainer img {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto 12px;
+    border: 1px solid #bfd0db;
+    border-radius: 6px;
+}
+
+#figureContainer figcaption {
+    line-height: 1.5;
+    padding: 0 8px 15px;
+}
+
+@media (max-width: 720px) {
+    #figureContainer figure {
+        display: block;
+        width: 320px;
+        max-width: 100%;
+        margin: 15px auto;
+    }
+}
+
+body { width: 100%; } {
+    #figureContainer figure {
+        width: 320px;
+    }
+}
