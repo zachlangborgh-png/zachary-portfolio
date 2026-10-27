@@ -173,3 +173,13 @@ nav a.selected {background-color:#1d6674; color:white;}
 }
 @media(max-width:600px) {.newsletter h1 {font-size:2rem;} .newsletter-photo {float:none; width:160px; margin:0 auto 24px;} .newsletter blockquote {margin:16px 8px;} .box {padding:18px;} nav ul {display:flex;} }
 @media(prefers-reduced-motion:reduce) {.newsletter-button,.newsletter-button span {transition:none;} .newsletter-button:hover span,.newsletter-button:focus-visible span {transform:none;} }
+/* Contact table layout */
+.contact-table {width:100%; max-width:720px; margin:24px auto; border:3px solid #173f5f; border-collapse:collapse;}
+.contact-table th {background:#173f5f; color:#fff; text-align:center; padding:18px; font-size:1.3rem;}
+.contact-table td {padding:13px 16px; border:1px solid #c6d9df; vertical-align:top;}
+.contact-table tr:nth-child(even) {background-color:#f2f7fa;}
+.field-label {width:35%; text-align:right; font-weight:bold; color:#173f5f;}
+.field-placeholder {color:#52616c;}
+.required {color:#a51d2d; font-weight:bold;}
+.contact-note {max-width:720px; margin:16px auto; color:#52616c;}
+@media(max-width:600px) {.contact-table td {padding:10px 8px;} .field-label {width:42%;} .contact-table th {font-size:1.1rem;}}
