@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Zachary Langborgh">
+<meta name="description" content="Eight interactive JavaScript demonstrations exploring technology, security, and study planning.">
+<title>JavaScript Lab | Zachary Langborgh</title>
+<link href="zachary-portfolio.css" rel="stylesheet" type="text/css">
+<link href="javascript-lab.css" rel="stylesheet">
+</head>
+<body id="top">
+<div id="wrapper">
+<header><p class="site-name">Zachary Langborgh</p><p>Cybersecurity Student and Aspiring Technology Professional</p></header>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a href="portfolio.htm">Portfolio</a></li>
+<li><a href="transcript.htm">Transcript</a></li>
+<li><a href="newsletter.htm">Newsletter</a></li>
+<li><a href="contact.htm">Contact</a></li>
+</ul>
+</nav>
+<main><h1 class="page-title">JavaScript Technology Lab</h1><p>Explore eight interactive demonstrations related to my technology interests.</p><ol class="js-demos">
+<li><h2>Security reminder: hover alert</h2><button type="button" onmouseover="alert('Protect your accounts: use unique passwords and enable multifactor authentication.');" onclick="alert('Protect your accounts: use unique passwords and enable multifactor authentication.');">Hover for an account security tip</button></li>
+<li><h2>Portfolio alert button</h2><button type="button" onclick="alert('My portfolio connects my interests in cybersecurity, networking, Python, and web development.');">About my technical interests</button></li>
+<li><h2>Choose a learning interest</h2><button type="button" onclick="askInterest()">Choose a topic</button><p id="interestAnswer" aria-live="polite">Your response will appear here.</p></li>
+<li><h2>Document update date</h2><p><small><script src="scripts/last-update.js"></script></small></p><p>The same date routine appears at the bottom of Home and Portfolio.</p></li>
+<li><h2>Weekly study calculator</h2><form id="studyForm"><p><label>Study minutes per day <input id="minutes" type="number" min="1" max="1440" required></label></p><p><label>Study days per week <input id="days" type="number" min="1" max="7" step="1" required></label></p><button type="submit">Calculate weekly hours</button><p id="studyResult" aria-live="polite"></p></form></li>
+<li><h2>Internal image effect</h2><p>Compare the portfolio banner in color and grayscale.</p><img id="effectImage" src="images/cybersecurity-banner.jpg" alt="Cybersecurity portfolio banner" width="600"><p><button type="button" onclick="toggleImageEffect()">Toggle grayscale</button></p></li>
+<li><h2>External script: study countdown</h2><p>Start a one-minute practice break timer.</p><p id="timerOutput" role="timer">60 seconds remaining</p><button id="startTimer" type="button">Start timer</button> <button id="resetTimer" type="button">Reset timer</button></li>
+<li><h2>Cybersecurity popup window</h2><button type="button" onclick="openSecurityWindow()">Open security checklist</button><p id="popupStatus" aria-live="polite"></p></li>
+</ol></main>
+<footer>Contact Me: <a href="mailto:zachlangborgh@gmail.com">zachlangborgh@gmail.com</a> | <a href="tel:+17034037195">(703) 403-7195</a> | <a href="#top">Return to Top</a><br><small><span class="special-character">&copy;</span> 2026 Zachary Langborgh. All rights reserved.</small></footer>
+</div><!-- close wrapper -->
+
+<script>
+function askInterest() {
+ const answer = prompt('Which topic interests you most: cybersecurity, networking, or Python?');
+ document.getElementById('interestAnswer').textContent = answer && answer.trim() ? 'Your learning interest: ' + answer.trim() + '. Explore my portfolio for my developing technical skills.' : 'No topic selected. You can try again anytime.';
+}
+document.getElementById('studyForm').addEventListener('submit', function(event) {
+ event.preventDefault();
+ const minutes = Number(document.getElementById('minutes').value);
+ const days = Number(document.getElementById('days').value);
+ document.getElementById('studyResult').textContent = 'Your weekly study plan totals ' + (minutes * days / 60).toFixed(2) + ' hours.';
+});
+// Adapted from https://www.w3schools.com/jsref/prop_style_filter.asp
+// Applies or removes grayscale on the existing cybersecurity banner.
+function toggleImageEffect() {
+ const picture = document.getElementById('effectImage');
+ picture.style.filter = picture.style.filter === 'grayscale(100%)' ? 'none' : 'grayscale(100%)';
+}
+function openSecurityWindow() {
+ const popup = window.open('security-checklist.htm', 'securityChecklist', 'popup=yes,width=560,height=480,left=160,top=100,resizable=yes,scrollbars=yes');
+ document.getElementById('popupStatus').textContent = popup ? 'The security checklist opened in a separate window.' : 'Your browser blocked the popup. Allow popups for this site and try again.';
+ if (popup) popup.focus();
+}
+</script>
+<script src="scripts/study-timer.js"></script>
+</body>
+</html>
