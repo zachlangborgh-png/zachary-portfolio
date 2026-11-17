@@ -1,57 +1,101 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Zachary Langborgh">
-<meta name="description" content="Eight interactive JavaScript demonstrations exploring technology, security, and study planning.">
-<title>JavaScript Lab | Zachary Langborgh</title>
-<link href="zachary-portfolio.css" rel="stylesheet" type="text/css">
-<link href="javascript-lab.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zachary Langborgh">
+  <meta name="description" content="Audio, video, animation, and interactive media from Zachary Langborgh's web development portfolio.">
+  <title>Media Demo | Zachary Langborgh</title>
+  <link href="zachary-portfolio.css" rel="stylesheet">
 </head>
 <body id="top">
-<div id="wrapper">
-<header><p class="site-name">Zachary Langborgh</p><p>Cybersecurity Student and Aspiring Technology Professional</p></header>
-<nav aria-label="Main navigation">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="resume.html">Resume</a></li>
-<li><a href="portfolio.htm">Portfolio</a></li>
-<li><a href="transcript.htm">Transcript</a></li>
-<li><a href="newsletter.htm">Newsletter</a></li>
-<li><a href="contact.htm">Contact</a></li>
-</ul>
-</nav>
-<main><h1 <title>Media Demo | Zachary Langborgh</title>
-<meta name="description" content="Audio, video, animation, and interactive media from Zachary Langborgh's web development portfolio.">
-<meta name="author" content="Zachary Langborgh">
-</ol></main>
-<footer>Contact Me: <a href="mailto:zachlangborgh@gmail.com">zachlangborgh@gmail.com</a> | <a href="tel:+17034037195">(703) 403-7195</a> | <a href="#top">Return to Top</a><br><small><span class="special-character">&copy;</span> 2026 Zachary Langborgh. All rights reserved.</small></footer>
-</div><!-- close wrapper -->
+  <div id="wrapper">
+    <header>
+      <p class="site-name">Zachary Langborgh</p>
+      <p>Cybersecurity Student and Aspiring Technology Professional</p>
+    </header>
 
-<script>
-function askInterest() {
- const answer = prompt('Which topic interests you most: cybersecurity, networking, or Python?');
- document.getElementById('interestAnswer').textContent = answer && answer.trim() ? 'Your learning interest: ' + answer.trim() + '. Explore my portfolio for my developing technical skills.' : 'No topic selected. You can try again anytime.';
-}
-document.getElementById('studyForm').addEventListener('submit', function(event) {
- event.preventDefault();
- const minutes = Number(document.getElementById('minutes').value);
- const days = Number(document.getElementById('days').value);
- document.getElementById('studyResult').textContent = 'Your weekly study plan totals ' + (minutes * days / 60).toFixed(2) + ' hours.';
-});
-// Adapted from https://www.w3schools.com/jsref/prop_style_filter.asp
-// Applies or removes grayscale on the existing cybersecurity banner.
-function toggleImageEffect() {
- const picture = document.getElementById('effectImage');
- picture.style.filter = picture.style.filter === 'grayscale(100%)' ? 'none' : 'grayscale(100%)';
-}
-function openSecurityWindow() {
- const popup = window.open('security-checklist.htm', 'securityChecklist', 'popup=yes,width=560,height=480,left=160,top=100,resizable=yes,scrollbars=yes');
- document.getElementById('popupStatus').textContent = popup ? 'The security checklist opened in a separate window.' : 'Your browser blocked the popup. Allow popups for this site and try again.';
- if (popup) popup.focus();
-}
-</script>
-<script src="scripts/study-timer.js"></script>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.htm">Portfolio</a></li>
+        <li><a href="transcript.htm">Transcript</a></li>
+        <li><a href="newsletter.htm">Newsletter</a></li>
+        <li><a href="contact.htm">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Media Demo</h1>
+
+      <ol class="media-demos">
+        <li>
+          <h2>Audio</h2>
+          <audio controls preload="metadata">
+            <source src="media/welcome.mp3" type="audio/mpeg">
+            <a href="media/welcome.mp3">Download my audio welcome</a>
+          </audio>
+        </li>
+
+        <li>
+          <h2>Video</h2>
+          <video controls playsinline preload="metadata" width="640">
+            <source src="media/portfolio-tour.mp4" type="video/mp4">
+            <a href="media/portfolio-tour.mp4">Download my portfolio tour</a>
+          </video>
+        </li>
+
+        <li>
+          <h2>Animated GIF</h2>
+          <img src="media/workspace.gif"
+               alt="Zachary working on his portfolio at his computer">
+        </li>
+
+        <li>
+          <h2>Slideshow</h2>
+          <p id="slideshow-help">Scroll sideways to see three pages from my site.</p>
+          <div class="media-slideshow" tabindex="0" role="region"
+               aria-label="Portfolio screenshots" aria-describedby="slideshow-help">
+            <figure>
+              <img src="media/home.png" alt="Zachary's portfolio homepage">
+              <figcaption>Home</figcaption>
+            </figure>
+            <figure>
+              <img src="media/javascript.png" alt="JavaScript assignment page">
+              <figcaption>JavaScript demos</figcaption>
+            </figure>
+            <figure>
+              <img src="media/contact.png" alt="Portfolio contact page">
+              <figcaption>Contact</figcaption>
+            </figure>
+          </div>
+        </li>
+
+        <li>
+          <h2>YouTube</h2>
+          <!-- Paste the YouTube embed code here. -->
+        </li>
+
+        <li>
+          <h2>z-index</h2>
+          <p>The JavaScript page is layered over the homepage using CSS.</p>
+          <div class="media-stack">
+            <img class="media-stack-back" src="media/home.png"
+                 alt="Homepage screenshot in the back">
+            <img class="media-stack-front" src="media/javascript.png"
+                 alt="JavaScript page screenshot layered in front">
+          </div>
+        </li>
+      </ol>
+    </main>
+
+    <footer>
+      Contact Me: <a href="mailto:zachlangborgh@gmail.com">zachlangborgh@gmail.com</a> |
+      <a href="tel:+17034037195">(703) 403-7195</a> |
+      <a href="#top">Return to Top</a><br>
+      <small><span class="special-character">&copy;</span> 2026 Zachary Langborgh. All rights reserved.</small>
+    </footer>
+  </div>
 </body>
 </html>
