@@ -195,3 +195,58 @@ nav a.selected {background-color:#1d6674; color:white;}
 #contactForm .contact-options legend {font-size:0.9rem; margin-bottom:8px;}
 #contactForm .contact-options label {display:block; margin-bottom:8px; color:#1f2933;}
 #contactForm input[type="radio"], #contactForm input[type="checkbox"] {width:auto; margin-right:6px; accent-color:#173f5f;}
+.media-demos {
+  list-style-type: decimal;
+  padding-left: 2rem;
+}
+
+.media-demos > li {
+  margin-bottom: 2rem;
+}
+
+.media-demos audio,
+.media-demos video,
+.media-demos img {
+  max-width: 100%;
+}
+
+.media-demos img {
+  height: auto;
+}
+
+.media-slideshow {
+  display: flex;
+  gap: 1rem;
+  max-width: 640px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.media-slideshow figure {
+  flex: 0 0 85%;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.media-stack {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  max-width: 640px;
+}
+
+.media-stack img {
+  grid-row: 1;
+  width: 100%;
+  border: 2px solid #1b5260;
+}
+
+.media-stack-back {
+  grid-column: 1 / 8;
+  z-index: 1;
+}
+
+.media-stack-front {
+  grid-column: 4 / 11;
+  margin-top: 3rem;
+  z-index: 2;
+}
