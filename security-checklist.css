@@ -1,0 +1,16 @@
+html,
+body,
+main {
+  background: #000;
+  color: #fff;
+}
+
+h1.page-title {
+  color: #ffd700;
+}
+
+button {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
