@@ -258,3 +258,10 @@ nav a.selected {background-color:#1d6674; color:white;}
   aspect-ratio: 16 / 9;
   border: 0;
 }
+.hidden-projects {
+  display: none;
+}
+
+.hidden-projects:target {
+  display: block;
+}
